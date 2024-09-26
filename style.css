@@ -1,0 +1,112 @@
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+nav {
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #86a8e7, #91eae4); /* gradasi keren*/
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: armenian;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+/* tulisan di nav*/
+nav ul li a {
+    color: #fff;
+    text-decoration: aquamarine;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+/* nav nya bisa di hover :)*/
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* latar belakang */
+#content {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #015aff;
+    transition: color 0.3s ease, transform 0.3s ease; /*ulik dikit transisi bisa dipakai di future*/
+}
+
+h1:hover {
+    color: #ff5722; 
+}
+p {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-left: 3px solid #0073e6; 
+    background-color: #f4f4f4;
+    text-indent: 20px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+}
+:target {
+    display: block; 
+}
+#home:target ~ #content > #home,
+#profile:target ~ #content > #profile,
+#hometown:target ~ #content > #hometown,
+#food:target ~ #content > #food,
+#tourist:target ~ #content > #tourist {
+    display: block; 
+}
+/* tambah animasi tipis tipis ganti page */
+.fade-in {
+    animation: fadeInAnimation 0.5s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    #content {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
